@@ -4,7 +4,7 @@
 // @namespace      http://wittman.org/projects/friendfeedimagezoom
 // @include        http://friendfeed.com/*
 // @description    Displays full size post image in a new tab
-// @version        0.1.0
+// @version        0.1.1
 // ==/UserScript==
 
 /*! jQuery v1.7.2 jquery.com | jquery.org/license */
@@ -38,7 +38,8 @@ function image_zoom(){
 	}
 
 	/****** Start main_loop ******/
-	setInterval(main_loop, 2000);
+	main_loop(); //run once for immediate effect (especially important for on single post view)
+	setInterval(main_loop, 2000); //run in loop
 }
 
 /****** Run App ******/
