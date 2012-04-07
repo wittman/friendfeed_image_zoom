@@ -7,7 +7,7 @@ The `friendfeed_image_zoom` userscript / extension for friendfeed.com opens a po
 
 >_Discussion_: <http://friendfeed.com/fftools/7a677739/friendfeed_image_zoom-browser-extension>
 
-So far, this userscript / extension was tested on Google Chrome 18 and Firefox 6 with [Greasemonkey](http://www.greasespot.net/) ([download](https://addons.mozilla.org/firefox/748/)) and may also work in Safari with the plugin [NinjaKit](http://d.hatena.ne.jp/os0x/20100612/1276330696) ([download](http://ss-o.net/safari/extension/NinjaKit.safariextz)).
+So far, this userscript / extension was tested on Google Chrome 18 and Firefox 6 with [Greasemonkey](http://www.greasespot.net/) ([download](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)) and may also work in Safari with the plugin [NinjaKit](http://d.hatena.ne.jp/os0x/20100612/1276330696) ([download](http://ss-o.net/safari/extension/NinjaKit.safariextz)).
 
 ## Change Log
 
