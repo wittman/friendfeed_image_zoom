@@ -4,7 +4,7 @@
 // @namespace      http://wittman.org/projects/friendfeedimagezoom
 // @include        http://friendfeed.com/*
 // @description    Displays full size post image in a new tab
-// @version        0.1.1
+// @version        0.1.2
 // ==/UserScript==
 
 /*! jQuery v1.7.2 jquery.com | jquery.org/license */
@@ -15,11 +15,15 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
 
 
 function image_show(){
-	var img_src = window.location.hash.replace(/#/,'');
-    $('#container').css({maxWidth:'none', width:'auto'});
-	$('#sidebar, .box-body *').hide();
+	var img_src = window.location.hash.match(/(#)([a-z 0-9]{40})$/);
+	if( (img_src !== null) && img_src.hasOwnProperty('2') ){
+	    $('#container').css({maxWidth:'none', width:'auto'});
+		$('#sidebar, .box-body *').hide();
+		$('#page .box-body').prepend('<img src="http://m.friendfeed-media.com/' + img_src[2] + '">');
+	}else{
+		$('#page .box-body').prepend('<div style="color:red;font-size:14px;margin:2em">ERROR: Incorrect image identifier in URL fragment. Image cannot be displayed.</div>');
+	}
 	$('.box-bar-text a').attr('href', '#').text('Friendfeed Image Zoom Extension by Micah Wittman');
-	$('#page .box-body').prepend('<img src="http://m.friendfeed-media.com/' + img_src + '">');
 }
 
 function image_zoom(){
