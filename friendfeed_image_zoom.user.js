@@ -4,7 +4,8 @@
 // @namespace      http://wittman.org/projects/friendfeedimagezoom
 // @include        http://friendfeed.com/*
 // @description    Displays full size post image in a new tab
-// @version        0.1.2
+// @version        0.1.3
+// @grand         GM_getValue
 // ==/UserScript==
 
 /*! jQuery v1.7.2 jquery.com | jquery.org/license */
